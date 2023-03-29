@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const imcInfo = [
+            {inicio:0,fim:18.4,classificacao:'magreza',grau:'0'},
+            {inicio:18.5,fim:24.9,classificacao:'normal',grau:'0'},
+            {inicio:25,fim:29.9,classificacao:'sobrepeso',grau:'I'},
+            {inicio:30,fim:39.9,classificacao:'obesidade',grau:'II'},
+            {inicio:40,fim:Infinity,classificacao:'obesidade grave',grau:'III'},
+        ];
+
+        window.addEventListener('load', () => {
+            document.getElementById('formulario').addEventListener('submit', function(event){
+                event.preventDefault();
+                const peso = document.getElementById('peso').value;
+                const altura = document.getElementById('altura').value;
+
+                const titulos = document.getElementById('resultado').getElementsByClassName('titulo');
+                
+                for(i=titulos.lenght-1;i>=0;i--){
+                    titulos[i].remove;
+                }
+
+                if(peso && altura){
+                    const imc = peso / (altura * altura);
+                    let result;
+                    for(info of imcInfo){
+                        if(imc >= info.inicio && imc <= info.fim){
+                            result=info;
+                            result.imc = imc.toFixed(2);
+                        };   
+                    };
+                    let element = document.createElement('h2');
+                    element.append('IMC: '+result.imc);
+                    document.getElementById('resultado').appendChild(element);
+
+                    element = document.createElement('h3');
+                    element.append('Grau: '+result.grau);
+                    document.getElementById('resultado').appendChild(element);
+
+                    element = document.createElement('h4');
+                    element.append('Classificação: '+result.classificacao);
+                    document.getElementById('resultado').appendChild(element);
+                };
+                });
+            });
+        
+    </script>
+</head>
+
+<body>
+    <form id="formulario">
+    <br>
+    <label for="Peso">Peso:</label>
+    <input type="number" step="0.01" id="peso">
+    <br>
+    <label for="Altura">Altura:</label>
+    <input type="number" step="0.01" id="altura">
+    <br>
+    <input type="submit">
+    </form>
+    <div id="resultado"></div>
+</body>
+</html>

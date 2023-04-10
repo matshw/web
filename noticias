@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticia</title>
+</head>
+<body>
+    <div id="noticia"></div>
+    <script>
+        const noticias = [
+            {
+                titulo: "Frear mudanças no Enem evita maiores prejuízos aos estudantes, avaliam entidades",
+                texto: "Ao suspender o cronograma de implementação do novo ensino médio, o governo Luiz Inácio Lula da Silva (PT) vai frear mudanças que estavam previstas para o Enem (Exame Nacional do Ensino Médio) 2024. Na avaliação de entidades da área, adiar as alterações vai evitar maiores prejuízos aos alunos diante da indefinição com essa etapa de ensino. Conforme mostrou a Folha, pressionado por críticas crescentes de educadores e estudantes, o governo federal deve publicar nos próximos dias uma portaria com a alteração do prazo de implementação da política.",
+                link: "https://www1.folha.uol.com.br/educacao/2023/04/frear-mudancas-no-enem-evita-maior-prejuizos-aos-estudantes-avaliam-entidades.shtml"
+            },
+            {
+                titulo: "Cientistas capturam peixe mais profundo do mundo, a 8 km da superfície",
+                texto: "Peixes foram capturados mais de 8 quilômetros sob a superfície do oceano pela primeira vez —e filmados ainda mais fundo— por uma expedição científica conjunta de Japão e Austrália. O cientista-chefe da expedição, professor Alan Jamieson, disse nesta segunda-feira que dois peixes-caracol foram capturados em armadilhas colocadas a 8.022 metros de profundidade na Fossa do Japão, ao sul do Japão, durante uma viagem de dois meses por uma equipe da Universidade da Austrália Ocidental (UWA) e da Universidade de Ciências Marinhas de Tóquio.",
+                link: "https://noticias.uol.com.br/ultimas-noticias/reuters/2023/04/03/peixe-mais-profundo-e-capturado-e-filmado-no-japao-por-cientistas.htm"
+            },
+            {
+                titulo: "Web Summit Rio vai movimentar R$ 1,2 bilhão na cidade até 2028",
+                texto: "A primeira edição do Web Summit Rio acontece entre os dias 1º e 4 de maio, no Riocentro. A estimativa é que 15 mil pessoas circulem pela cidade por dia de evento neste primeiro ano. A Prefeitura espera que na última edição, em 2028, esse número chegue a 70 mil. No total, o público do evento deve ser de 20% de turistas estrangeiros, 40% de brasileiros e 40% de cariocas. Ao final das edições, devem circular pelo evento 800 mil visitantes e 60 mil profissionais.",
+                link: "https://oglobo.globo.com/rio/conteudodemarca/1029381-web-summit-rio-vai-movimentar-12-bilhao-na-cidade-ate-2028-25675051?utm_source=chamada&utm_medium=g.lab&utm_campaign=invest.rio"
+            },
+            {
+                titulo: "Ministro da Educação diz avaliar possibilidade de suspender implementação do Novo Ensino Médio",
+                texto: "O ministro da Educação, Camilo Santana, disse nesta segunda-feira (3), no Recife, que avalia a possibilidade de suspender o calendário de implementação do Novo Ensino Médio. - Amanhã vou estar em Brasília e vou reunir a equipe para avaliar melhor, afirmou o ministro sobre o compromisso desta terça-feira (4). Ainda de acordo com Santana, a decisão sobre o tema será tomada até o fim das discussões do grupo de trabalho sobre o assunto, instituído por portaria que tem validade de 90 dias.",
+                link: "https://g1.globo.com/pe/pernambuco/educacao/noticia/2023/04/03/ministro-da-educacao-diz-avaliar-possibilidade-de-suspender-implementacao-do-novo-ensino-medio.ghtml"
+            },
+            {
+                titulo: "Governo avalia usar fundo de petroleiras para renovar frota de carros e combater a poluição, diz Haddad",
+                texto: "O ministro da Fazenda, Fernando Haddad, disse nesta segunda-feira (3) que o governo avalia um programa para renovar a frota de veículos do país, tirando de circulação os mais velhos e mais poluentes, numa ação a favor do meio ambiente. Haddad deu a declaração ao sair de uma reunião com o vice-presidente e ministro da Indústria, Geraldo Alckmin. A ideia, segundo Haddad, é indenizar os donos de veículos antigos. O dinheiro não sairia do governo, mas de um fundo alimentado com recursos pagos por petroleiras. ",
+                link: "https://g1.globo.com/economia/noticia/2023/04/03/governo-avalia-usar-fundo-de-petroleiras-para-renovar-frota-de-carros-e-combater-a-poluicao.ghtml"
+            },
+            {
+                titulo: "Itamaraty escolhe mais 5 mulheres para postos-chave na diplomacia",
+                texto: "O Ministério das Relações Exteriores deverá formalizar nos próximos dias a indicação de cinco diplomatas mulheres para representar o Brasil no exterior. Desses, três serão em embaixadas na Europa. Os cinco nomes ainda não podem ser divulgados, mas fontes do Itamaraty confirmaram ao blog que os pedidos de agrément - procedimento que consiste em consultar o Estado receptor se este está de acordo com a indicação - já foram feitos.",
+                link: "https://g1.globo.com/economia/blog/ana-flor/post/2023/04/03/itamaraty-escolhe-mais-5-mulheres-para-postos-chave-na-diplomacia.ghtml"
+            }
+            
+        ]
+
+        const aleatorio = Math.floor(Math.random() * noticias.length);
+        const conteudo = noticias[aleatorio];
+
+        const html = `
+        <h2>${conteudo.titulo}</h2>
+        <h3>${conteudo.texto}</h3>
+        <a href="${conteudo.link}">Leia mais sobre essa notícia aqui</a>
+  `;
+        document.getElementById('noticia').innerHTML = html;
+</script>
+</body>
+</html>

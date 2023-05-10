@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/style.css">
+<body>
+    <div id="cabecalho"><img class="logo" src="default_transparent_765x625.png"></div>
+    <div id="geral">
+        <div id="form">
+            <div id="form1">
+            <form action="form.php" method="post">
+                <label for="title" id="title1">Receba novidades de camisas no seu email</label>
+                <br><br>
+                <label for="nome">Nome:</label>
+                <br>
+                <input type="text" name="nome" id="nome">
+                <br><br>
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" name="email" id="email">
+                <br><br>
+                <label>Você possui uma coleção de camisas do vasco?</label>
+                <br>
+                <div>
+                <input type="checkbox" id="op1" name="checkbox">
+                <label for="checkbox">Sim</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="op2" name="checkbox">
+                    <label for="checkbox">Não</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="op3" name="checkbox">
+                    <label for="checkbox">Possuo algumas</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="op4" name="checkbox">
+                    <label for="checkbox">Estou começando</label>
+                </div>
+                <br>
+                <label for="quantidade">Quantas camisas você possui?</label><br>
+                <select name="select">
+                    <option value="valor0" selected>Nenhuma</option>
+                    <option value="valor1">1</option>
+                    <option value="valor2">2</option>
+                    <option value="valor3">3</option>
+                    <option value="valor4">4</option>
+                    <option value="valor5">5 ou mais</option>
+                </select>
+                <br><br>
+                <label for="time">Qual seu time do coração?</label><br>
+                <input type="text" name="time" id="time">
+                <br><br>
+                <button class="btn btn-1 btn-sep icon-info" href="#">Receber Novidades</button>
+            </form>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

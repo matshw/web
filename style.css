@@ -1,0 +1,141 @@
+#cabecalho{
+    background-color: #000000d0;
+    height: 60px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    text-align: center;
+}
+
+
+.logo{
+    width: 200px;
+    height: auto;
+    position: relative;
+    object-position: center;
+    top: -50px;
+}
+
+#form{
+    position: relative;
+    left: 850px;
+    background-color: rgb(60, 192, 126);
+    top:20px;
+    height: 480px;
+    width: 400px;
+    
+}
+
+#form1{
+    padding-left: 20px;
+    padding-top: 20px;
+    color: white;
+    font-size:medium;    
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+#title1{
+    font-weight: 400;
+    text-align: center;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* #enviar {
+    cursor: pointer;
+    left: 85px;
+    position: relative;
+    text-align: center;
+    background: #0066A2;
+	color: white;
+	border-style: outset;
+	border-color: #0066A2;
+	height: 40px;
+	width: 190px;
+	font: bold 15px arial,sans-serif;
+	text-shadow: none;
+} */
+
+
+.btn {
+    border: none;
+    font-family: 'Lato';
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    margin: 5px 73px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  .btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  /* Pseudo elements for icons */
+  .btn:before {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Icon separator */
+.btn-sep {
+    padding: 15px;
+  }
+  
+  .btn-sep:before {
+    background: rgba(0,0,0,0.15);
+  }
+
+  /* Button 1 */
+.btn-1 {
+    background: #3498db;
+    color: #fff;
+  }
+  
+  .btn-1:hover {
+    background: #2980b9;
+  }
+  
+  .btn-1:active {
+    background: #2980b9;
+    top: 2px;
+  }
+  
+  .btn-1:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 140%;
+    width: 60px;
+  }
+  
